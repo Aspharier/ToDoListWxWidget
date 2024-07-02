@@ -10,7 +10,15 @@ private:
 	void BindEventHandlers();
 
 	void OnAddButtonClicked(wxCommandEvent& evt);
+	void OnInputEnter(wxCommandEvent& evt);
+	void OnListKeyDown(wxKeyEvent& evt);
+	void OnClearButtonClicked(wxCommandEvent& evt);
+	void OnWindowClosed(wxCloseEvent& evt);
+
 	void AddTaskFromInput();
+	void DeleteSelectedTask();
+	void MoveSelectedTask(int offset);
+	void swapTask(int i, int j);
 
 	wxPanel* panel;
 	wxStaticText* headlineText;
